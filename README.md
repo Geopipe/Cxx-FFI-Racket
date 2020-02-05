@@ -2,7 +2,7 @@ C++ FFI Utilities for Racket
 ============================
 Contains three useful files:
  - `FFI-Bindings.rkt` lets you bind FFI functions using Racket's [`ffi/unsafe`](https://docs.racket-lang.org/foreign/index.html) module, but extends the Racket notion of `cpointer` types to include `c++pointer` types, which support subtyping and upcasts.
- - `Cxx-Types.rkt` lets you automatically define `c++pointer` types for the entire type hierarchy of some API, by parsing JSON descriptions of inheritance relations emitted by [this set of Python utilities](https://github.com/Geopipe/Cxx-FFI), to discover symbol names of functions implementing the necessary upcasts (a C++ file containing the necessary functions can be emitted using the same Python utilities).
+ - `Cxx-Types.rkt` lets you automatically define `c++pointer` types for the entire type hierarchy of some API, by parsing JSON descriptions of inheritance relations emitted by [this library](https://github.com/Geopipe/Cxx-FFI), to discover symbol names of functions implementing the necessary upcasts (a C++ file containing the necessary functions can be emitted using the same Python utilities).
  - `private/interactive-helpers.rkt` allows you to easily preload a set of libraries into the Racket address space, so that `FFI-Bindings.rkt` doesn't need to know about specific path to libraries.
 
 Usage
